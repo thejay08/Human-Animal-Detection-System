@@ -3,5 +3,5 @@ torch
 torchvision
 transformers
 Pillow
-opencv-python
+opencv-python-headless
 matplotlib
