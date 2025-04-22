@@ -33,13 +33,13 @@ A Streamlit-based AI application that detects and differentiates between humans 
 
 ### 1. Clone the repository
 
-```bash
+
 git clone https://github.com/thejay08/Human-Animal-Detection-System.git
 cd Human-Animal-Detection-System
 
 ## Demo App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
+[![Streamlit App](https://human-animal-detection-system.streamlit.app/)](https://app-starter-kit.streamlit.app/)
 
 ## GitHub Codespaces
 
