@@ -39,9 +39,7 @@ cd Human-Animal-Detection-System
 
 ## Demo App
 
-[![Streamlit App](https://human-animal-detection-system.streamlit.app/)](https://human-animal-detection-system.streamlit.app/)
+[![Streamlit App](https://github.com/codespaces/badge.svg)](https://human-animal-detection-system.streamlit.app/)
 
-## GitHub Codespaces
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/app-starter-kit?quickstart=1)
 
