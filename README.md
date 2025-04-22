@@ -39,7 +39,7 @@ cd Human-Animal-Detection-System
 
 ## Demo App
 
-[![Streamlit App](https://human-animal-detection-system.streamlit.app/)](https://app-starter-kit.streamlit.app/)
+[![Streamlit App](https://human-animal-detection-system.streamlit.app/)](https://human-animal-detection-system.streamlit.app/)
 
 ## GitHub Codespaces
 
