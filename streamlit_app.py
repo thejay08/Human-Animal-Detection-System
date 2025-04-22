@@ -98,7 +98,7 @@ with tab1:
     uploaded_image = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
     if uploaded_image:
         image, top_results, alert = process_image(uploaded_image, model, processor)
-        st.image(image, caption="Uploaded Image", use_column_width=True)
+        st.image(image, caption="Uploaded Image", use_container_width=True)
         if alert:
             st.warning(alert)
         st.subheader("Top 3 Predictions")
