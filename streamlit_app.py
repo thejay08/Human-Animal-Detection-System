@@ -8,11 +8,16 @@ import tempfile
 import os
 import matplotlib.pyplot as plt
 
-# Load CLIP model and processor
+# Load CLIP model and processor (from local first, fallback to Hugging Face)
 @st.cache_resource
 def load_model():
-    model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
-    processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
+    try:
+        model = CLIPModel.from_pretrained("./clip_model")
+        processor = CLIPProcessor.from_pretrained("./clip_model")
+    except:
+        st.warning("⚠️ Loading from Hugging Face. This might fail on Streamlit Cloud.")
+        model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
+        processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
     return model, processor
 
 # Define candidate labels
