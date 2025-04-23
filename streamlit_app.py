@@ -8,16 +8,11 @@ import tempfile
 import os
 import matplotlib.pyplot as plt
 
-# Load CLIP model and processor (from local first, fallback to Hugging Face)
+# Load CLIP model and processor
 @st.cache_resource
 def load_model():
-    try:
-        model = CLIPModel.from_pretrained("./clip_model")
-        processor = CLIPProcessor.from_pretrained("./clip_model")
-    except:
-        st.warning("⚠️ Loading from Hugging Face. This might fail on Streamlit Cloud.")
-        model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
-        processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
+    model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
+    processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
     return model, processor
 
 # Define candidate labels
@@ -103,7 +98,7 @@ with tab1:
     uploaded_image = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
     if uploaded_image:
         image, top_results, alert = process_image(uploaded_image, model, processor)
-        st.image(image, caption="Uploaded Image", use_container_width=True)
+        st.image(image, caption="Uploaded Image", use_column_width=True)
         if alert:
             st.warning(alert)
         st.subheader("Top 3 Predictions")
